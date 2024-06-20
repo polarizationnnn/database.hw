@@ -17,21 +17,6 @@ CREATE TABLE Model (
     FOREIGN KEY (Brand_ID) REFERENCES Brand(Brand_ID)
 );
 
--- 創建車輛表
-CREATE TABLE Vehicle (
-    VIN VARCHAR(17) PRIMARY KEY,
-    Model_ID INT,
-    Color VARCHAR(20),
-    Engine VARCHAR(50),
-    Transmission VARCHAR(50),
-    Dealer_ID INT,
-    Customer_ID INT,
-    Sale_Date DATE,
-    FOREIGN KEY (Model_ID) REFERENCES Model(Model_ID),
-    FOREIGN KEY (Dealer_ID) REFERENCES Dealer(Dealer_ID),
-    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
-);
-
 -- 創建經銷商表
 CREATE TABLE Dealer (
     Dealer_ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -63,6 +48,21 @@ CREATE TABLE Plant (
     Plant_ID INT PRIMARY KEY AUTO_INCREMENT,
     Plant_Name VARCHAR(50) NOT NULL,
     Location VARCHAR(50)
+);
+
+-- 創建車輛表
+CREATE TABLE Vehicle (
+    VIN VARCHAR(17) PRIMARY KEY,
+    Model_ID INT,
+    Color VARCHAR(20),
+    Engine VARCHAR(50),
+    Transmission VARCHAR(50),
+    Dealer_ID INT,
+    Customer_ID INT,
+    Sale_Date DATE,
+    FOREIGN KEY (Model_ID) REFERENCES Model(Model_ID),
+    FOREIGN KEY (Dealer_ID) REFERENCES Dealer(Dealer_ID),
+    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
 );
 
 -- 創建供應表
