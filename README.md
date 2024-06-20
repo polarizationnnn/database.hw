@@ -35,3 +35,58 @@
     ```
 
 5. 查看查詢結果
+
+E-R圖
+Entities:
+---------
+Brand (Brand_ID, Brand_Name)
+    |
+    |
+    1:N
+    |
+    |
+Model (Model_ID, Brand_ID, Model_Name, Body_Style)
+    |
+    |
+    1:N
+    |
+    |
+Vehicle (VIN, Model_ID, Color, Engine, Transmission, Dealer_ID, Customer_ID, Sale_Date)
+    |                                      |                    |
+    |                                      |                    |
+    N:1                                    N:1                  N:1
+    |                                      |                    |
+    |                                      |                    |
+Dealer (Dealer_ID, Dealer_Name, Address,   Customer (Customer_ID, Name, Address, Phone, Gender, Annual_Income)
+Phone)
+    |
+    |
+    N:M
+    |
+    |
+Inventory (Dealer_ID, VIN, In_Stock_Date)
+    |
+    |
+    N:1
+    |
+    |
+Supplier (Supplier_ID, Supplier_Name, Address, Phone)
+    |
+    |
+    1:N
+    |
+    |
+Plant (Plant_ID, Plant_Name, Location)
+    |
+    |
+    N:M
+    |
+    |
+Supplies (Supplier_ID, Model_ID, Part_Type)
+    |
+    |
+    1:N
+    |
+    |
+Model (Model_ID, Brand_ID, Model_Name, Body_Style)
+
