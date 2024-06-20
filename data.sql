@@ -1,19 +1,12 @@
 USE CarCompany;
 
 -- 插入品牌
-INSERT INTO Brand (Brand_Name) VALUES 
-('Volkswagen'), 
-('Audi'), 
-('Toyota'), 
-('Ford'), 
-('Chevrolet');
-DESCRIBE Brand;
+INSERT INTO Brand (Brand_Name) VALUES ('Volkswagen'), ('Audi'),('Toyota'), ('Ford'), ('Chevrolet');
 
 -- 插入車型
-INSERT INTO Model (Brand_ID, Model_Name, Body_Style) VALUES 
-(1, 'Golf', 'Hatchback'), 
+INSERT INTO Model (Brand_ID, Model_Name, Body_Style) VALUES
+(1, 'Golf', 'Hatchback'),
 (1, 'Passat', 'Sedan'),
-(1, 'Tiguan', 'SUV'),
 (2, 'A4', 'Sedan'),
 (2, 'Q7', 'SUV'),
 (2, 'A3', 'Hatchback'),
@@ -26,19 +19,17 @@ INSERT INTO Model (Brand_ID, Model_Name, Body_Style) VALUES
 (5, 'Cruze', 'Sedan'),
 (5, 'Malibu', 'Sedan'),
 (5, 'Equinox', 'SUV');
-DESCRIBE Model;
 
 -- 插入經銷商
-INSERT INTO Dealer (Dealer_Name, Address, Phone) VALUES 
+INSERT INTO Dealer (Dealer_Name, Address, Phone) VALUES
 ('BestCars', '123 Main St', '555-1234'),
 ('AutoHub', '456 Side St', '555-5678'),
 ('CarWorld', '789 Broad St', '555-8765'),
 ('SuperAutos', '101 First Ave', '555-2345'),
 ('MegaMotors', '202 Second Ave', '555-3456');
-DESCRIBE Dealer;
 
 -- 插入客戶
-INSERT INTO Customer (Name, Address, Phone, Gender, Annual_Income) VALUES 
+INSERT INTO Customer (Name, Address, Phone, Gender, Annual_Income) VALUES
 ('John Doe', '456 Elm St', '555-5678', 'M', 50000),
 ('Jane Smith', '789 Pine St', '555-8765', 'F', 60000),
 ('Alice Johnson', '123 Oak St', '555-1122', 'F', 70000),
@@ -49,10 +40,9 @@ INSERT INTO Customer (Name, Address, Phone, Gender, Annual_Income) VALUES
 ('Fiona Green', '678 Willow St', '555-6677', 'F', 65000),
 ('George Harris', '789 Poplar St', '555-7788', 'M', 59000),
 ('Hannah Ives', '890 Ash St', '555-8899', 'F', 71000);
-DESCRIBE Customer;
 
 -- 插入車輛
-INSERT INTO Vehicle (VIN, Model_ID, Color, Engine, Transmission, Dealer_ID, Customer_ID, Sale_Date) VALUES 
+INSERT INTO Vehicle (VIN, Model_ID, Color, Engine, Transmission, Dealer_ID, Customer_ID, Sale_Date) VALUES
 ('1HGBH41JXMN109186', 1, 'Red', '2.0L', 'Manual', 1, 1, '2023-05-20'),
 ('2HGBH41JXMN109187', 2, 'Blue', '2.0L', 'Automatic', 2, 2, '2023-06-15'),
 ('3HGBH41JXMN109188', 3, 'Black', '2.5L', 'Manual', 3, 3, '2023-07-10'),
@@ -68,28 +58,25 @@ INSERT INTO Vehicle (VIN, Model_ID, Color, Engine, Transmission, Dealer_ID, Cust
 ('13HGBH41JXMN109198', 13, 'Blue', '2.0L', 'Manual', 3, 3, '2024-05-25'),
 ('14HGBH41JXMN109199', 14, 'Green', '2.4L', 'Automatic', 4, 4, '2024-06-20'),
 ('15HGBH41JXMN109200', 15, 'Yellow', '2.2L', 'Manual', 5, 5, '2024-07-15');
-DESCRIBE Vehicle;
 
 -- 插入供應商
-INSERT INTO Supplier (Supplier_Name, Address, Phone) VALUES 
+INSERT INTO Supplier (Supplier_Name, Address, Phone) VALUES
 ('Getrag', '789 Industrial Rd', '555-1111'),
 ('Bosch', '456 Manufacturing Ave', '555-2222'),
 ('Continental', '101 Tech Blvd', '555-3333'),
 ('Denso', '202 Auto Pkwy', '555-4444'),
 ('Magna', '303 Industry St', '555-5555');
-DESCRIBE Supplier;
 
 -- 插入工廠
-INSERT INTO Plant (Plant_Name, Location) VALUES 
+INSERT INTO Plant (Plant_Name, Location) VALUES
 ('Main Plant', 'Detroit'),
 ('Auxiliary Plant', 'Chicago'),
 ('East Plant', 'New York'),
 ('West Plant', 'Los Angeles'),
 ('South Plant', 'Houston');
-DESCRIBE Plant;
 
 -- 插入供應關係
-INSERT INTO Supplies (Supplier_ID, Model_ID, Part_Type) VALUES 
+INSERT INTO Supplies (Supplier_ID, Model_ID, Part_Type) VALUES
 (1, 1, 'Transmission'),
 (2, 2, 'Engine'),
 (3, 3, 'Brakes'),
@@ -100,10 +87,8 @@ INSERT INTO Supplies (Supplier_ID, Model_ID, Part_Type) VALUES
 (3, 8, 'Brakes'),
 (4, 9, 'Steering'),
 (5, 10, 'Suspension');
-DESCRIBE Supplies;
-
 -- 插入庫存
-INSERT INTO Inventory (Dealer_ID, VIN, In_Stock_Date) VALUES 
+INSERT INTO Inventory (Dealer_ID, VIN, In_Stock_Date) VALUES
 (1, '1HGBH41JXMN109186', '2023-01-01'),
 (2, '2HGBH41JXMN109187', '2023-02-01'),
 (3, '3HGBH41JXMN109188', '2023-03-01'),
@@ -119,4 +104,3 @@ INSERT INTO Inventory (Dealer_ID, VIN, In_Stock_Date) VALUES
 (3, '13HGBH41JXMN109198', '2024-01-01'),
 (4, '14HGBH41JXMN109199', '2024-02-01'),
 (5, '15HGBH41JXMN109200', '2024-03-01');
-DESCRIBE Inventory;
