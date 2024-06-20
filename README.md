@@ -22,7 +22,7 @@ https://dev.mysql.com/downloads/workbench/
 
 ## E-R Model
 
-![image]()
+![image](https://github.com/polarizationnnn/helpme/blob/picture/helpme.drawio.png?raw=true)
 
 ## Relation Schema
 
