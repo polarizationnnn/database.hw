@@ -20,6 +20,14 @@ https://dev.mysql.com/downloads/workbench/
 - data.sql :輸入表格內容
 - queries.sql : 執行查詢
 
+## E-R Model
+
+![image]()
+
+## Relation Schema
+
+![image]()
+
 ## 題目答案
 
 1.每輛車有缺陷的變速箱的 VIN 以及將其出售給的客戶
