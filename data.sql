@@ -7,6 +7,7 @@ INSERT INTO Brand (Brand_Name) VALUES
 ('Toyota'), 
 ('Ford'), 
 ('Chevrolet');
+DESCRIBE Brand;
 
 -- 插入車型
 INSERT INTO Model (Brand_ID, Model_Name, Body_Style) VALUES 
@@ -25,6 +26,7 @@ INSERT INTO Model (Brand_ID, Model_Name, Body_Style) VALUES
 (5, 'Cruze', 'Sedan'),
 (5, 'Malibu', 'Sedan'),
 (5, 'Equinox', 'SUV');
+DESCRIBE Model;
 
 -- 插入經銷商
 INSERT INTO Dealer (Dealer_Name, Address, Phone) VALUES 
@@ -33,6 +35,7 @@ INSERT INTO Dealer (Dealer_Name, Address, Phone) VALUES
 ('CarWorld', '789 Broad St', '555-8765'),
 ('SuperAutos', '101 First Ave', '555-2345'),
 ('MegaMotors', '202 Second Ave', '555-3456');
+DESCRIBE Dealer;
 
 -- 插入客戶
 INSERT INTO Customer (Name, Address, Phone, Gender, Annual_Income) VALUES 
@@ -46,6 +49,7 @@ INSERT INTO Customer (Name, Address, Phone, Gender, Annual_Income) VALUES
 ('Fiona Green', '678 Willow St', '555-6677', 'F', 65000),
 ('George Harris', '789 Poplar St', '555-7788', 'M', 59000),
 ('Hannah Ives', '890 Ash St', '555-8899', 'F', 71000);
+DESCRIBE Customer;
 
 -- 插入車輛
 INSERT INTO Vehicle (VIN, Model_ID, Color, Engine, Transmission, Dealer_ID, Customer_ID, Sale_Date) VALUES 
@@ -64,6 +68,7 @@ INSERT INTO Vehicle (VIN, Model_ID, Color, Engine, Transmission, Dealer_ID, Cust
 ('13HGBH41JXMN109198', 13, 'Blue', '2.0L', 'Manual', 3, 3, '2024-05-25'),
 ('14HGBH41JXMN109199', 14, 'Green', '2.4L', 'Automatic', 4, 4, '2024-06-20'),
 ('15HGBH41JXMN109200', 15, 'Yellow', '2.2L', 'Manual', 5, 5, '2024-07-15');
+DESCRIBE Vehicle;
 
 -- 插入供應商
 INSERT INTO Supplier (Supplier_Name, Address, Phone) VALUES 
@@ -72,6 +77,7 @@ INSERT INTO Supplier (Supplier_Name, Address, Phone) VALUES
 ('Continental', '101 Tech Blvd', '555-3333'),
 ('Denso', '202 Auto Pkwy', '555-4444'),
 ('Magna', '303 Industry St', '555-5555');
+DESCRIBE Supplier;
 
 -- 插入工廠
 INSERT INTO Plant (Plant_Name, Location) VALUES 
@@ -80,6 +86,7 @@ INSERT INTO Plant (Plant_Name, Location) VALUES
 ('East Plant', 'New York'),
 ('West Plant', 'Los Angeles'),
 ('South Plant', 'Houston');
+DESCRIBE Plant;
 
 -- 插入供應關係
 INSERT INTO Supplies (Supplier_ID, Model_ID, Part_Type) VALUES 
@@ -93,6 +100,7 @@ INSERT INTO Supplies (Supplier_ID, Model_ID, Part_Type) VALUES
 (3, 8, 'Brakes'),
 (4, 9, 'Steering'),
 (5, 10, 'Suspension');
+DESCRIBE Supplies;
 
 -- 插入庫存
 INSERT INTO Inventory (Dealer_ID, VIN, In_Stock_Date) VALUES 
@@ -111,3 +119,4 @@ INSERT INTO Inventory (Dealer_ID, VIN, In_Stock_Date) VALUES
 (3, '13HGBH41JXMN109198', '2024-01-01'),
 (4, '14HGBH41JXMN109199', '2024-02-01'),
 (5, '15HGBH41JXMN109200', '2024-03-01');
+DESCRIBE Inventory;
