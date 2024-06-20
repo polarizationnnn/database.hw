@@ -26,7 +26,7 @@ https://dev.mysql.com/downloads/workbench/
 
 ## Relation Schema
 
-![image]()
+![image](https://github.com/polarizationnnn/database.hw/blob/picture/helpme2.drawio.png?raw=true)
 
 ## 題目答案
 
