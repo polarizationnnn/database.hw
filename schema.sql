@@ -1,3 +1,4 @@
+DROP DATABASE CarCompany;
 -- 創建數據庫
 CREATE DATABASE CarCompany;
 USE CarCompany;
