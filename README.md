@@ -16,6 +16,9 @@ https://dev.mysql.com/downloads/workbench/
 ![image](https://github.com/polarizationnnn/helpme/blob/picture/messageImage_1718850688384.jpg?raw=true)
 
 3.依序開啟並執行schema.sql、data.sql、queries.sql
+- schema.sql : 建立資料庫與表格
+- data.sql :輸入表格內容
+- queries.sql : 執行查詢
 
 ## 題目答案
 
